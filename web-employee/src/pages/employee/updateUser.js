@@ -98,7 +98,7 @@ const UpdateUser = () => {
                     />
                 </Form.Group>
 
-                <Button variant="black" type="submit" className="w-100">
+                <Button variant="dark" type="submit" className="w-100">
                     Edit Employee
                 </Button>
             </Form>
