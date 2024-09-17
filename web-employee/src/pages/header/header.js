@@ -13,7 +13,7 @@ const Header = () =>{
             <Navbar.Brand to="/">
                 <strong>Employee Managment System</strong>
             </Navbar.Brand>
-            <Nav classname="ml-auto">
+            <Nav className="ml-auto">
                 <Nav.Link as={Link} to="/" className="nav-link">Employees</Nav.Link>
                 <Nav.Link as={Link} to="/employee" className="nav-link">Post Employees</Nav.Link>
             </Nav>

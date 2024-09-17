@@ -1,5 +1,6 @@
 package com.example.back_employee.service;
 
+import java.util.List;
 
 import com.example.back_employee.repository.EmployeeRepository;
 import com.example.back_employee.entity.Employee;
@@ -14,5 +15,9 @@ public class EmployeeService {
 
     public Employee postEmployee(Employee employee) {
         return employeeRepository.save(employee);
+    }
+
+    public List<Employee> getAllEmployee() {
+        return employeeRepository.findAll();
     }
 }
