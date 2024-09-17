@@ -85,7 +85,7 @@ const PostUser = () => {
                     />
                 </Form.Group>
 
-                <Button variant="primary" type="submit" className="w-100">
+                <Button variant="black" type="submit" className="w-100">
                     Post Employee
                 </Button>
             </Form>

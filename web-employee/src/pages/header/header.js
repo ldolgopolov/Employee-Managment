@@ -8,7 +8,7 @@ import "./header.css"
 const Header = () =>{
     return (
     <>
-    <Navbar bg="primary" variant="dark">
+    <Navbar bg="black" variant="dark">
         <Container>
             <Navbar.Brand to="/">
                 <strong>Employee Managment System</strong>

@@ -1,6 +1,7 @@
 package com.example.back_employee.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.example.back_employee.repository.EmployeeRepository;
 import com.example.back_employee.entity.Employee;
@@ -27,5 +28,23 @@ public class EmployeeService {
             throw new EntityNotFoundException("Employee with ID: " + id + " not found!");
         }
         employeeRepository.deleteById(id);
+    }
+
+    public Employee getEmployeeById(Long id) {
+        return employeeRepository.findById(id).orElse(null);
+    }
+
+    public Employee updateEmployee(Long id, Employee employee) {
+        Optional<Employee> optionalEmployee = employeeRepository.findById(id);
+        if (optionalEmployee.isPresent()) {
+            Employee existingEmployee = optionalEmployee.get();
+            existingEmployee.setEmail(employee.getEmail());
+            existingEmployee.setName(employee.getName());
+            existingEmployee.setPhone_number(employee.getPhone_number());
+            existingEmployee.setDepartment(employee.getDepartment());
+
+            return employeeRepository.save(existingEmployee);
+        }
+        return null;
     }
 }
